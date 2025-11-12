@@ -1,22 +1,32 @@
-// FormularioResenia
-
 import "./ReviewCard.css";
+import { deleteReview } from "../../services/reviewService";
 
-function ReviewCard({ review }) {
+function ReviewCard({ review, onDelete }) {
+  const handleDelete = async () => {
+    if (window.confirm("¿Seguro que deseas eliminar esta reseña?")) {
+      try {
+        await deleteReview(review._id);
+        alert("Reseña eliminada correctamente");
+        if (onDelete) onDelete(); // actualiza la lista si se pasa la función
+      } catch (error) {
+        console.error("Error al eliminar la reseña:", error);
+        alert("No se pudo eliminar la reseña");
+      }
+    }
+  };
+
   return (
     <div className="review-card">
-      <h3>Juego ID: {review.juegoId._id}</h3>
+      <h3>{review.juegoId?.titulo || "Juego desconocido"}</h3>
       <p>⭐ {review.puntuacion} / 5</p>
-      <p>
-        <strong>Dificultad:</strong> {review.dificultad}
-      </p>
-      <p>
-        <strong>Horas jugadas:</strong> {review.horasJugadas}
-      </p>
       <p>{review.textoReseña}</p>
-      <small>
-        {review.recomendaria ? "✅ Lo recomendaría" : "❌ No lo recomendaría"}
-      </small>
+      {review.horasJugadas && <p>⏱️ {review.horasJugadas} horas jugadas</p>}
+      <p>Dificultad: {review.dificultad}</p>
+      <p>{review.recomendaria ? "✅ Recomendado" : "🚫 No recomendado"}</p>
+
+      <button className="delete-btn" onClick={handleDelete}>
+        Eliminar reseña
+      </button>
     </div>
   );
 }

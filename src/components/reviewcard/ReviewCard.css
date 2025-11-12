@@ -40,3 +40,19 @@
 /* puntuacion / detalles */
 .review-card .puntuacion{ color:var(--accent); font-weight:700 }
 .review-card .detalles{ display:flex; gap:12px; color:var(--muted); font-size:0.92rem }
+
+
+.delete-btn {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c53030;
+}

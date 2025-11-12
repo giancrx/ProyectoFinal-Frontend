@@ -1,20 +1,23 @@
-// ListaResenias
-
 import { useEffect, useState } from "react";
 import { getReviews } from "../../services/reviewService";
 import ReviewCard from "../../components/reviewcard/ReviewCard";
 import "./Reviews.css";
+
 function Reviews() {
   const [reviews, setReviews] = useState([]);
 
+  const fetchReviews = async () => {
+    const data = await getReviews();
+    setReviews(data);
+  };
+
   useEffect(() => {
-    const fetchReviews = async () => {
-      const data = await getReviews();
-      console.log(data);
-      setReviews(data);
-    };
     fetchReviews();
   }, []);
+
+  const handleDeleteReview = (deletedId) => {
+    setReviews((prevReviews) => prevReviews.filter((r) => r._id !== deletedId));
+  };
 
   return (
     <div>
@@ -24,7 +27,11 @@ function Reviews() {
       ) : (
         <div className="reviews-grid">
           {reviews.map((review) => (
-            <ReviewCard key={review._id} review={review} />
+            <ReviewCard
+              key={review._id}
+              review={review}
+              onDelete={() => handleDeleteReview(review._id)}
+            />
           ))}
         </div>
       )}

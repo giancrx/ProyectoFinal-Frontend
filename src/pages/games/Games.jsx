@@ -1,5 +1,3 @@
-//BibliotecaJuegos
-
 import { useEffect, useState } from "react";
 import { getGames } from "../../services/gameService";
 import GameCard from "../../components/gamecard/GameCard";
@@ -7,20 +5,20 @@ import GameCard from "../../components/gamecard/GameCard";
 function Games() {
   const [games, setGames] = useState([]);
 
-  const API_URL = "http://localhost:4000/api/games";
+  // Cargar juegos
+  const fetchGames = async () => {
+    const data = await getGames();
+    setGames(data);
+  };
 
   useEffect(() => {
-    /* const fetchData = async () => {
-      const data = await getGames();
-      setGames(data);
-    }; */
-
-    fetch(API_URL)
-      .then((resp) => resp.json())
-      .then((data) => setGames(data));
-
-    //fetchData();
+    fetchGames();
   }, []);
+
+  // Quitar juego eliminado del estado
+  const handleDeleteGame = (deletedId) => {
+    setGames((prevGames) => prevGames.filter((g) => g._id !== deletedId));
+  };
 
   return (
     <div>
@@ -30,10 +28,7 @@ function Games() {
       ) : (
         <div className="games-grid">
           {games.map((game) => (
-
-            <GameCard key={game._id} game={game} />
-
-            
+            <GameCard key={game._id} game={game} onDelete={handleDeleteGame} />
           ))}
         </div>
       )}
