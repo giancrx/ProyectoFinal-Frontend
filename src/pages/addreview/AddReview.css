@@ -1,13 +1,46 @@
+form.form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: "Poppins", sans-serif;
+}
 
-
-select {
+select,
+input,
+textarea {
   width: 100%;
   padding: 10px;
   border-radius: 8px;
-  background-color: var(--bg-card);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #ccc;
   outline: none;
   font-size: 1rem;
   transition: border-color 0.2s ease;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  border-color: #e63946;
+  box-shadow: 0 0 6px rgba(230, 57, 70, 0.3);
+}
+
+button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #c71f32;
 }

@@ -1,8 +1,8 @@
 .home-container {
   padding: 2rem;
   font-family: "Poppins", sans-serif;
-  color: #fff;
-  background: linear-gradient(135deg, #1e1f29, #2b2d42);
+  color: #333;
+  background: #f7f7f7;
   min-height: 100vh;
 }
 
@@ -23,20 +23,21 @@
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #222;
 }
 
 .hero-text span {
-  color: #00bcd4;
+  color: #e63946;
 }
 
 .hero-text p {
   font-size: 1.1rem;
-  color: #ddd;
+  color: #555;
   margin-bottom: 2rem;
 }
 
 .cta-button {
-  background-color: #00bcd4;
+  background-color: #e63946;
   border: none;
   color: white;
   padding: 0.8rem 1.5rem;
@@ -47,7 +48,7 @@
 }
 
 .cta-button:hover {
-  background-color: #0097a7;
+  background-color: #c71f32;
 }
 
 .hero-image img {
@@ -62,7 +63,7 @@
 .features h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #00bcd4;
+  color: #e63946;
 }
 
 .features-grid {
@@ -72,16 +73,16 @@
 }
 
 .feature-card {
-  background-color: #2f3244;
+  background-color: #fff;
   border-radius: 12px;
   padding: 1.5rem;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  background-color: #3a3d54;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .feature-card img {
@@ -90,11 +91,11 @@
 }
 
 .feature-card h3 {
-  color: #00bcd4;
+  color: #e63946;
   margin-bottom: 0.5rem;
 }
 
 .feature-card p {
-  color: #ccc;
+  color: #555;
   font-size: 0.95rem;
 }

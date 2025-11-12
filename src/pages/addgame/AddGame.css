@@ -2,73 +2,20 @@ form.form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: var(--bg-card);
+  background-color: #ffffff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   max-width: 600px;
-  margin: 20px auto;
+  margin: 40px auto;
+  color: #333;
+  font-family: "Poppins", sans-serif;
 }
 
 form.form h2 {
-  color: var(--accent-color);
-  margin-bottom: 15px;
+  color: #e63946;
   text-align: center;
-}
-
-form.form input,
-form.form textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-size: 1rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-form.form input:focus,
-form.form textarea:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 6px var(--accent-color);
-  outline: none;
-}
-
-form.form textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-form.form label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-color);
-  font-weight: 500;
-}
-
-form.form button {
-  padding: 12px 18px;
-  border: none;
-  border-radius: 8px;
-  background-color: var(--accent-color);
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.1s ease;
-}
-
-form.form button:hover {
-  background-color: var(--accent-hover);
-  transform: translateY(-2px);
-}
-
-@media (max-width: 768px) {
-  form.form {
-    padding: 20px;
-    margin: 15px;
-  }
+  margin-bottom: 20px;
 }
 
 .form-group {
@@ -79,23 +26,31 @@ form.form button:hover {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 14px 12px 14px 12px;
+  padding: 14px 12px;
   border-radius: 8px;
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #e63946;
+  box-shadow: 0 0 6px rgba(230, 57, 70, 0.3);
 }
 
 .form-group label {
   position: absolute;
   top: 50%;
-  left: 12px;
+  left: 14px;
   transform: translateY(-50%);
-  color: var(--text-muted);
+  color: #777;
   pointer-events: none;
   transition: 0.2s ease all;
+  background-color: #fff;
   padding: 0 4px;
 }
 
@@ -105,5 +60,21 @@ form.form button:hover {
 .form-group textarea:not(:placeholder-shown) + label {
   top: -8px;
   font-size: 0.8rem;
-  color: var(--accent-color);
+  color: #e63946;
+}
+
+form.form button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e63946;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+form.form button:hover {
+  background-color: #c71f32;
+  transform: translateY(-2px);
 }

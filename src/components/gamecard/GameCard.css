@@ -1,105 +1,95 @@
-.game-card {
-  background: linear-gradient(145deg, #1c1f2b, #2a2e40);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #f1f1f1;
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  margin: 1rem auto;
-  border: 1px solid #32364a;
+/* GameCard.css */
+/* Usado por el componente GameCard (clase .game-card, .game-cover-bg, .game-details etc.) */
+
+
+.game-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow: 0 6px 18px rgba(11,11,11,0.04);
+  transition: transform .18s ease, box-shadow .18s ease;
+  color: var(--text);
+  display:flex;
+  flex-direction:column;
+  width: 350px; /* puedes ajustar o usar grid del contenedor */
+  margin: 0.6rem auto;
 }
 
-.game-card:hover {
+.game-card:hover{
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 30px rgba(11,11,11,0.06);
 }
 
-.game-cover {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.4s ease;
+/* Imagen (usas .game-cover-bg en un div con background-image) */
+.game-cover-bg{
+  width:100%;
+  height:220px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  transition: transform .28s ease;
+}
+.game-card:hover .game-cover-bg{ transform: scale(1.03) }
+
+.game-details{
+  padding:1rem 1.1rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.45rem;
 }
 
-.game-card:hover .game-cover {
-  transform: scale(1.05);
+.game-details h3{
+  color:var(--accent);
+  font-size:1.15rem;
+  margin:0;
 }
 
-/* Nuevo: usar un div con imagen de fondo en lugar de <img> cuando se necesite */
-.game-cover-bg {
-  width: 100%;
-  height: 240px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: transform 0.4s ease;
+.genre{
+  color:var(--muted);
+  font-style:italic;
+  margin-bottom:0.4rem;
+  font-size:0.95rem;
 }
 
-.game-card:hover .game-cover-bg {
-  transform: scale(1.05);
+.game-details p{
+  margin:0;
+  font-size:0.95rem;
+  color:var(--text);
+  line-height:1.35;
 }
 
-.game-details {
-  padding: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+.description{
+  margin-top:0.4rem;
+  color:var(--muted);
+  font-size:0.92rem;
 }
 
-.game-details h3 {
-  color: #00c2ff;
-  font-size: 1.3rem;
-  margin-bottom: 0.2rem;
+/* Estatus y badge */
+.status{ margin-top:0.8rem; text-align:right }
+
+.badge{
+  padding:0.38rem 0.68rem;
+  border-radius:8px;
+  font-size:0.82rem;
+  font-weight:600;
+  display:inline-block;
+}
+.completed{
+  background: rgba(0,168,90,0.12);
+  color: var(--success);
+  border: 1px solid rgba(0,168,90,0.16);
+}
+.pending{
+  background: rgba(230,0,18,0.08);
+  color: var(--accent);
+  border: 1px solid rgba(204,0,16,0.08);
 }
 
-.genre {
-  color: #aaa;
-  font-style: italic;
-  margin-bottom: 0.6rem;
-}
-
-.game-details p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #ddd;
-  line-height: 1.4;
-}
-
-.description {
-  margin-top: 0.6rem;
-  font-size: 0.9rem;
-  color: #b5b5b5;
-}
-
-.status {
-  margin-top: 1rem;
-  text-align: right;
-}
-
-.badge {
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: bold;
-}
-
-.completed {
-  background-color: #4caf50;
-  color: #fff;
-}
-
-.pending {
-  background-color: #ff9800;
-  color: #fff;
-}
-
-.games-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
+/* Grid helper (si lo usas en la página de juegos) */
+.games-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap:1.25rem;
+  align-items:start;
 }

@@ -1,3 +1,5 @@
+// ListaResenias
+
 import { useEffect, useState } from "react";
 import { getReviews } from "../../services/reviewService";
 import ReviewCard from "../../components/reviewcard/ReviewCard";

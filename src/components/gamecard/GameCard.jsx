@@ -1,3 +1,5 @@
+// TarjetaJuego
+
 import "./GameCard.css";
 
 function GameCard({ game }) {
