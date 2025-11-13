@@ -93,3 +93,18 @@
   gap:1.25rem;
   align-items:start;
 }
+
+.edit-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #198754;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #157347;
+}

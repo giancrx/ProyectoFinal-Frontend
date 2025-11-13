@@ -6,6 +6,7 @@ import Games from "./pages/games/Games";
 import AddGame from "./pages/addgame/AddGame";
 import Reviews from "./pages/reviews/Reviews";
 import AddReview from "./pages/addreview/AddReview";
+import EditGame from "./pages/editgame/EditGame";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/add-game" element={<AddGame />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/add-review" element={<AddReview />} />
+          <Route path="/edit-game/:id" element={<EditGame />} />
         </Routes>
       </main>
     </Router>

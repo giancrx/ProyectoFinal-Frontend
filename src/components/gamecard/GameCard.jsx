@@ -1,6 +1,6 @@
 import "./GameCard.css";
 import { deleteGame } from "../../services/gameService";
-
+import { useNavigate } from "react-router-dom";
 function GameCard({ game, onDelete }) {
   const handleDelete = async () => {
     if (window.confirm(`¿Seguro que deseas eliminar "${game.titulo}"?`)) {
@@ -14,7 +14,7 @@ function GameCard({ game, onDelete }) {
       }
     }
   };
-
+  const navigate = useNavigate();
   return (
     <div className="game-card">
       <div
@@ -42,9 +42,16 @@ function GameCard({ game, onDelete }) {
             <span className="badge pending">🎯 Pendiente</span>
           )}
         </div>
+        <button
+      className="edit-btn"
+      onClick={() => navigate(`/edit-game/${game._id}`)}
+    >
+      ✏️ Editar
+    </button>
         <button className="delete-btn" onClick={handleDelete}>
           🗑️ Eliminar juego
         </button>
+
       </div>
     </div>
   );
