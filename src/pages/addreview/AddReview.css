@@ -1,27 +1,50 @@
+/* Contenedor general */
+.add-review-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Título */
+.add-review-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Formulario */
 form.form {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  max-width: 600px;
-  margin: 40px auto;
-  font-family: "Poppins", sans-serif;
 }
 
-select,
-input,
-textarea {
+/* Inputs, selects, textareas */
+form.form select,
+form.form input,
+form.form textarea {
   width: 100%;
   padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 15px;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f9f9f9 !important; /* fuerza fondo claro */
+  color: #333 !important; /* fuerza texto oscuro */
   border: 1px solid #ccc;
   outline: none;
   font-size: 1rem;
   transition: border-color 0.2s ease;
 }
 
+/* Fix: remover fondo negro de inputs number y textarea */
+input[type="number"],
+textarea {
+  background-color: #f9f9f9 !important;
+  color: #333 !important;
+}
+
+/* Hover y focus */
 select:focus,
 input:focus,
 textarea:focus {
@@ -29,6 +52,7 @@ textarea:focus {
   box-shadow: 0 0 6px rgba(230, 57, 70, 0.3);
 }
 
+/* Botón */
 button {
   background-color: #e63946;
   color: white;
@@ -37,10 +61,19 @@ button {
   padding: 12px 18px;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 15px;
+  width: 100%;
+  margin-top: 10px;
   transition: background 0.2s ease;
 }
 
 button:hover {
   background-color: #c71f32;
+}
+
+/* Checkbox alineado correctamente */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
 }
