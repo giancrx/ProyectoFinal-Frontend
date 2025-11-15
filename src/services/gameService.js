@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:4000/api/games";
+const API_URL = "https://proyectofinal-backend-feq9.onrender.com/api/games";
 
 export const getGames = async () => {
   try {

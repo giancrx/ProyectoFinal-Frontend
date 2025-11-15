@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:4000/api/reviews";
+const API_URL = "https://proyectofinal-backend-feq9.onrender.com/api/reviews";
 
 // Obtener todas las reseñas
 export const getReviews = async () => {
