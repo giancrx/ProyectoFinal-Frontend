@@ -1,16 +1,20 @@
-# React + Vite
+# Proyecto Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Este proyecto es una aplicación frontend construida con React y Vite. La aplicación presenta una estructura modular, utiliza componentes reutilizables y se conecta a un backend externo para gestionar datos. Está diseñada para ser sencilla de mantener y rápida en ejecución.
 
-Currently, two official plugins are available:
+## Tecnologías utilizadas
+- React
+- Vite
+- JavaScript
+- CSS
+- GitHub Pages para despliegue
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura del proyecto
+src/
+├── components/ # Componentes reutilizables
+├── pages/ # Páginas principales
+├── services/ # Funciones encargadas de consumir el backend
+├── assets/ # Recursos estáticos
+├── App.jsx
+└── main.jsx
