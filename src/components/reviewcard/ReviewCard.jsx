@@ -16,7 +16,7 @@ function ReviewCard({ review, onDelete }) {
     }
   };
   const navigate = useNavigate();
-  
+
   return (
     <div className="review-card">
       <h3>{review.juegoId?.titulo || "Juego desconocido"}</h3>
@@ -26,7 +26,7 @@ function ReviewCard({ review, onDelete }) {
       <p>Dificultad: {review.dificultad}</p>
       <p>{review.recomendaria ? "✅ Recomendado" : "🚫 No recomendado"}</p>
 
-      <button onClick={() => navigate(`/edit-review/${review._id}`)}>
+      <button className="edit-btn" onClick={() => navigate(`/edit-review/${review._id}`)}>
         ✏️ Editar
       </button>
       <button className="delete-btn" onClick={handleDelete}>

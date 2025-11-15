@@ -25,6 +25,7 @@ function App() {
           <Route path="/edit-review/:id" element={<EditReview />} />
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 }

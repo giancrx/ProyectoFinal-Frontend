@@ -21,7 +21,7 @@ function Home() {
         </div>
         <div className="hero-image">
           <img
-            src="https://cdn.pixabay.com/photo/2017/01/31/13/14/controller-2029396_1280.png"
+            src="https://static.vecteezy.com/system/resources/previews/020/716/960/original/3d-minimal-gaming-symbol-stream-modern-games-wireless-controller-icon-entertainment-section-game-controller-sign-3d-illustration-png.png"
             alt="Game Controller"
           />
         </div>

@@ -43,11 +43,11 @@ function GameCard({ game, onDelete }) {
           )}
         </div>
         <button
-      className="edit-btn"
-      onClick={() => navigate(`/edit-game/${game._id}`)}
-    >
-      ✏️ Editar
-    </button>
+          className="edit-btn"
+          onClick={() => navigate(`/edit-game/${game._id}`)}
+        >
+          ✏️ Editar
+        </button>
         <button className="delete-btn" onClick={handleDelete}>
           🗑️ Eliminar juego
         </button>
