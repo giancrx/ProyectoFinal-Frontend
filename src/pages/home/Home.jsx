@@ -14,7 +14,7 @@ function Home() {
           </p>
           <button
             className="cta-button"
-            onClick={() => (window.location.href = "/games")}
+            onClick={() => (window.location.href = "/ProyectoFinal-Frontend/games")}
           >
             Explorar Juegos
           </button>
