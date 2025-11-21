@@ -1,4 +1,5 @@
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -12,12 +13,9 @@ function Home() {
             Lleva el control de tu biblioteca gamer, comparte reseñas, califica
             tus juegos favoritos y descubre nuevas aventuras.
           </p>
-          <button
-            className="cta-button"
-            onClick={() => (window.location.href = "/ProyectoFinal-Frontend/games")}
-          >
+          <Link to="/games" className="cta-button">
             Explorar Juegos
-          </button>
+          </Link>
         </div>
         <div className="hero-image">
           <img
